@@ -34,16 +34,11 @@ The detailed supporting notebooks are:
 > Does market news provide incremental predictive value beyond historical price
 > and volume information for next-trading-day stock forecasting?
 
-The primary target is next-day close-to-close return:
+The model predicts the percentage change between the current closing price and
+the next trading day’s closing price:
 
-\[
-r_{i,t+1}
-=
-\frac{Close_{i,t+1}}{Close_{i,t}}
-- 1
-\]
-
-Predicted returns are converted into next-day closing-price forecasts.
+```text
+next_day_return = (next_close / current_close) - 1
 
 ## Data
 
